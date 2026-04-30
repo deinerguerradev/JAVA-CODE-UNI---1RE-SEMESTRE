@@ -80,7 +80,7 @@ public class Program {
                 CustomerDiscount.Calculation(); 
                 break;
             case 6: 
-                IO.println(); 
+                StudentScholarishp.overview(); 
                 break;
             case 7: 
                 IO.println(); 
