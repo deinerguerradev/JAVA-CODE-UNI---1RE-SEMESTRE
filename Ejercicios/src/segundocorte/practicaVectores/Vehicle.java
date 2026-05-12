@@ -29,7 +29,7 @@ public class Vehicle {
     }
 
     private static boolean estaRegistrado(int id){
-        if(id == 0){
+        if(id == -1){
             return false;
         }
         else{
@@ -39,19 +39,29 @@ public class Vehicle {
 
     private static int searchEmployee(String id){
 
-        int i = 0;
+        int i = -1;
+        int placa = 0;
 
-        while(i < placas.length){
+        while(i < (placas.length-1)){
+
+            if (i == -1){
+                i++;
+                continue;
+            }
 
             if(id.equalsIgnoreCase(placas[i])){
+                placa = i;
                 break;
+            }
+            else{
+                placa = -1;
             }
 
             i++;
 
         }
 
-        return i;
+        return placa;
 
     }
 
