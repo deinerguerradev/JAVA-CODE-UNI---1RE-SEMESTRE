@@ -10,16 +10,32 @@ public class BuscarValor {
 
     public static void started () {
 
-        IO.println("=========================");
-        IO.println("= BUSCAR VALOR EN ARRAY =");
-        IO.println("=========================\n");
+        String salir = "";
 
-        IO.println("1. array para buscar un número.");
-        IO.println("2. array para buscar un nombre");
-        IO.println("0. salir\n");
+        while(!(salir.equals("s"))){
 
-        IO.println("ingrese una de las opciones anteriores: ");
-        int option = sc.nextInt();
+            IO.println("=========================");
+            IO.println("= BUSCAR VALOR EN ARRAY =");
+            IO.println("=========================\n");
+
+            IO.println("1. array para buscar un número.");
+            IO.println("2. array para buscar un nombre");
+            IO.println("0. salir\n");
+
+            IO.println("ingrese una de las opciones anteriores: ");
+            int option = sc.nextInt();
+
+            processInput(option);
+
+            IO.print("Quiere salir de la aplicación (s/n)?: ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
+
+    }
+
+    private static void processInput(int option){
 
         switch(option){
             case 0:

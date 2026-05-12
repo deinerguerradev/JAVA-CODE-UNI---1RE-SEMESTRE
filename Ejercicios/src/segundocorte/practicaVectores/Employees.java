@@ -12,18 +12,28 @@ public class Employees {
 
     static void started(){
 
-        IO.print("Ingrese la cédula a buscar: ");
-        String id = sc.nextLine();
+        String salir = "";
 
-        int employee = searchEmployee(id);
+        while(!(salir.equals("n"))){
 
-        boolean employeeFind = isEmployee(employee);
+            IO.print("Ingrese la cédula a buscar: ");
+            String id = sc.nextLine();
 
-        if(employeeFind){
-            printEmployeeInfo(employee);
-        }
-        else{
-            IO.println("la cedula " + id + " no se encuntra en el sistema!");
+            int employee = searchEmployee(id);
+
+            boolean employeeFind = isEmployee(employee);
+
+            if(employeeFind){
+                printEmployeeInfo(employee);
+            }
+            else{
+                IO.println("la cedula " + id + " no se encuntra en el sistema!");
+            }
+
+            IO.print("Quiere seguir evaluando empleados? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine().toLowerCase();
+
         }
 
     }

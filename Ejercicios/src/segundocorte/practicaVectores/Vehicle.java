@@ -12,29 +12,41 @@ public class Vehicle {
 
     static void started(){
 
-        IO.print("Ingrese la cédula a buscar: ");
-        String placa = sc.nextLine().toUpperCase();
+       String salir = "";
 
-        int auto = searchEmployee(placa);
+       while(!(salir.equals("s"))){
 
-        boolean elAutoEstaEnSistema = estaRegistrado(auto);
+           IO.print("Ingrese la placa a buscar: ");
+           String placa = sc.nextLine().toUpperCase();
 
-        if(elAutoEstaEnSistema){
-            printEmployeeInfo(auto);
-        }
-        else{
-            IO.println("la placa " + placa + " no se encuntra en el sistema!");
-        }
+           int auto = searchEmployee(placa);
+
+           boolean elAutoEstaEnSistema = estaRegistrado(auto);
+
+           if(elAutoEstaEnSistema){
+               printEmployeeInfo(auto);
+           }
+           else{
+               IO.println("la placa " + placa + " no se encuntra en el sistema!");
+           }
+
+           IO.print("Quieres seguir buscando un auto? (S/N): ");
+           sc.nextLine();
+           salir = sc.nextLine();
+
+       }
 
     }
 
     private static boolean estaRegistrado(int id){
+
         if(id == -1){
             return false;
         }
         else{
             return true;
         }
+
     }
 
     private static int searchEmployee(String id){
@@ -44,10 +56,7 @@ public class Vehicle {
 
         while(i < (placas.length-1)){
 
-            if (i == -1){
-                i++;
-                continue;
-            }
+            i++;
 
             if(id.equalsIgnoreCase(placas[i])){
                 placa = i;
@@ -56,8 +65,6 @@ public class Vehicle {
             else{
                 placa = -1;
             }
-
-            i++;
 
         }
 

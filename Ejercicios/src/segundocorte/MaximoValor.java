@@ -7,20 +7,30 @@ public class MaximoValor {
 
     public static void started() {
 
-        IO.print("¿Cuantos números vas a ingresar?: ");
-        int numbers = sc.nextInt();
+        String salir = "";
 
-        int[] values = new int[numbers];
+        while(!(salir.equals("s"))){
 
-        for (int i = 0; i < numbers; i++){
+            IO.print("¿Cuantos números vas a ingresar?: ");
+            int numbers = sc.nextInt();
 
-            IO.print("\nIngrese un número: ");
-            int number = sc.nextInt();
+            int[] values = new int[numbers];
 
-            values[i] = number;
+            for (int i = 0; i < numbers; i++){
+
+                IO.print("\nIngrese un número: ");
+                int number = sc.nextInt();
+
+                values[i] = number;
+            }
+
+            processArray(values);
+
+            IO.print("Quiere salir de la aplicación (s/n)?: ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
         }
-
-        processArray(values);
 
     }
 

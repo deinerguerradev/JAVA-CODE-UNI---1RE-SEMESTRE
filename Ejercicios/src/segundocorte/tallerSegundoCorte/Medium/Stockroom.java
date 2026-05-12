@@ -1,6 +1,10 @@
 package segundocorte.tallerSegundoCorte.Medium;
 
+import java.util.Scanner;
+
 public class Stockroom {
+
+    private static Scanner sc = new Scanner(System.in);
 
     private static String[] products = {"pan de queso", "pan mogolla", "desodorante", "arroz", "harina"};
     private static int[] productsQuantity = {20, 2, 7, 5, 3};
@@ -8,11 +12,21 @@ public class Stockroom {
 
     static void started (){
 
-        IO.println("\n======================");
-        IO.println(" INVENTARIA DE TIENDA ");
-        IO.println("======================\n");
+        String salir = "";
 
-        showAllProducts();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n======================");
+            IO.println(" INVENTARIA DE TIENDA ");
+            IO.println("======================\n");
+
+            showAllProducts();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

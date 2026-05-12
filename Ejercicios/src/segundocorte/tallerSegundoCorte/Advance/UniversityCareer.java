@@ -1,8 +1,10 @@
 package segundocorte.tallerSegundoCorte.Advance;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class UniversityCareer {
+
+    private static Scanner sc = new Scanner(System.in);
 
     private static String[] subjectName = {"matematicas", "fisica mecanica", "humanidadeas", "estadistica",
     "competenicas comunicativas", "Derpotes", "progamación II", "estructuras de datos I"};
@@ -12,11 +14,21 @@ public class UniversityCareer {
 
     static void started (){
 
-        IO.println("\n=======================");
-        IO.println(" CARRERA UNIVERSITARIA ");
-        IO.println("=======================\n");
+        String salir = "";
 
-        Allsubject();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n=======================");
+            IO.println(" CARRERA UNIVERSITARIA ");
+            IO.println("=======================\n");
+
+            Allsubject();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

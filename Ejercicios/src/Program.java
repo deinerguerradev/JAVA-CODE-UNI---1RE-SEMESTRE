@@ -29,7 +29,7 @@ public class Program {
         "3. Buscar valor dentro de arrays",
         "4. arrays para estudiantes",
         "5. taller de segundo corte",
-        "6. ejercicios del segundo corte",
+        "6. ejercicios de Vectore (3)",
         "0. salir"
     };
 

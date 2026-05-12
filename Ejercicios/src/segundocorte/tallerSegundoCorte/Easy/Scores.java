@@ -9,11 +9,21 @@ public class Scores {
 
     static void started() {
 
-        IO.println("\n====================");
-        IO.println("=  CALIFICACIONES  =");
-        IO.println("====================\n");
+        String salir = "";
 
-        getScores();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n====================");
+            IO.println("=  CALIFICACIONES  =");
+            IO.println("====================\n");
+
+            getScores();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

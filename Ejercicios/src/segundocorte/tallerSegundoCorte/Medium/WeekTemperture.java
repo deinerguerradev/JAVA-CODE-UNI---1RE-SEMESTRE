@@ -11,11 +11,21 @@ public class WeekTemperture {
 
     static void started (){
 
-        IO.println("==========================");
-        IO.println(" TEMPERATURA DE LA SEMANA ");
-        IO.println("==========================");
+        String salir = "";
 
-        getAngSaveTemperature();
+        while(!(salir.equals("s"))){
+
+            IO.println("==========================");
+            IO.println(" TEMPERATURA DE LA SEMANA ");
+            IO.println("==========================");
+
+            getAngSaveTemperature();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

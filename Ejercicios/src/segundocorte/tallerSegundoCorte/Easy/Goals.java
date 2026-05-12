@@ -1,17 +1,31 @@
 package segundocorte.tallerSegundoCorte.Easy;
 
+import java.util.*;
+
 public class Goals {
+
+    private static Scanner sc = new Scanner(System.in);
 
     private static String[] teams = {"Junior", "Nacional", "Bayern", "Manchester United", "Juventus", "River"};
     private static int[] teamsGoals = {6, 4, 24, 9, 17, 8};
 
     public static void started (){
 
-        IO.println("\n====================");
-        IO.println("  GOLES DE EQUIPOS  ");
-        IO.println("====================\n");
+        String salir = "";
 
-        getMaxGoals();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n====================");
+            IO.println("  GOLES DE EQUIPOS  ");
+            IO.println("====================\n");
+
+            getMaxGoals();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

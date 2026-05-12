@@ -9,11 +9,21 @@ public class Sales {
 
     static void started (){
 
-        IO.println("\n==========================");
-        IO.println("= ESTADISTICAS DE VENTAS =");
-        IO.println("==========================\n");
+        String salir = "";
 
-        getAllSales();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n==========================");
+            IO.println("= ESTADISTICAS DE VENTAS =");
+            IO.println("==========================\n");
+
+            getAllSales();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 
@@ -23,7 +33,7 @@ public class Sales {
 
         while(iteration < 30){
 
-            float sale = 0;
+            float sale;
 
             IO.print("Ingrese la cantidad de dinero generado en el día " + (iteration+1) + ": ");
             sale = sc.nextFloat();

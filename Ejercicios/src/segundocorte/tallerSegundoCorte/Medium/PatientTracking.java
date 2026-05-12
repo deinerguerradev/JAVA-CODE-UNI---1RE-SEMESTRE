@@ -1,6 +1,10 @@
 package segundocorte.tallerSegundoCorte.Medium;
 
+import java.util.Scanner;
+
 public class PatientTracking {
+
+    private static Scanner sc = new Scanner(System.in);
 
     private static String[] patientName = {"ana", "luisa", "cristobal", "andres", "adriana", "geordanovic"};
     private static int[] patientAge = {23, 43, 56, 24, 19, 20};
@@ -8,11 +12,21 @@ public class PatientTracking {
 
     static void started (){
 
-        IO.println("\n==========================");
-        IO.println("== CONTROL DE PACIENTES ==");
-        IO.println("==========================\n");
+        String salir = "";
 
-        showAllPatient();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n==========================");
+            IO.println("== CONTROL DE PACIENTES ==");
+            IO.println("==========================\n");
+
+            showAllPatient();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

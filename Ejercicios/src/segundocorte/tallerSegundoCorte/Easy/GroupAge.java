@@ -9,11 +9,21 @@ public class GroupAge {
     private static int[] peopleAges = new int[9];
     static void started (){
 
-        IO.println("\n======================");
-        IO.println("  EDADES DE UN GRUPO  ");
-        IO.println("======================\n");
+        String salir = "";
 
-        getAges();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n======================");
+            IO.println("  EDADES DE UN GRUPO  ");
+            IO.println("======================\n");
+
+            getAges();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

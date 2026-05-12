@@ -12,6 +12,18 @@ public class StudentField {
 
     public static void started() {
 
+        String salir = "";
+
+        while(!(salir.equals("s"))){
+
+
+
+            IO.print("Quiere salir de la aplicación (s/n)?: ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
+
         IO.println("Ingrese su codigo: ");
         int code = sc.nextInt();
 

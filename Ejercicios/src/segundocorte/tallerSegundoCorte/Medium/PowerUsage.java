@@ -1,17 +1,31 @@
 package segundocorte.tallerSegundoCorte.Medium;
 
+import java.util.Scanner;
+
 public class PowerUsage {
+
+    private static Scanner sc = new Scanner(System.in);
 
     private static String[] headquarters =  {"sede norte", "sede sur", "sede centro", "sede oriente", "sede occidente"};
     private static double[] headquartersConsumptions = {1850.5, 3200.8, 2750.0, 980.3, 4100.6};
 
     static void started (){
 
-        IO.println("\n==========================");
-        IO.println("=== CONTROL DE ENERGIA ===");
-        IO.println("==========================\n");
+        String salir = "";
 
-        showAllHeadquarters();
+        while(!(salir.equals("s"))){
+
+            IO.println("\n==========================");
+            IO.println("=== CONTROL DE ENERGIA ===");
+            IO.println("==========================\n");
+
+            showAllHeadquarters();
+
+            IO.print("¿Quieres termianr la ejecución? (s/n): ");
+            sc.nextLine();
+            salir = sc.nextLine();
+
+        }
 
     }
 

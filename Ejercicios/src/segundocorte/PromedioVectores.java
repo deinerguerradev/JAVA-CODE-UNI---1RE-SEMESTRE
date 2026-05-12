@@ -8,15 +8,24 @@ public class PromedioVectores {
 
     public static void calculateAverage(){
 
-        float totalScores = 0;
+        String salir = "";
 
-        for (int i = 0; i <score.length; i++){
-            totalScores = totalScores + score[i];
+        while(!(salir.equals("s"))){
+
+            float totalScores = 0;
+
+            for (int i = 0; i <score.length; i++){
+                totalScores = totalScores + score[i];
+            }
+
+            float average = totalScores / score.length;
+
+            IO.println("El promedio es: " + average);
+
+            IO.print("Quiere salir de la aplicación (s/n)?: ");
+            salir = sc.nextLine();
+
         }
-
-        float average = totalScores / score.length;
-
-        IO.println("El promedio es: " + average);
 
     }
 
