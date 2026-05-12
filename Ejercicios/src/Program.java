@@ -169,6 +169,7 @@ public class Program {
                 break;
             case 6:
                 Central.started();
+                break;
             default:
                 IO.println("Algoritmo no disponible");
                 break;

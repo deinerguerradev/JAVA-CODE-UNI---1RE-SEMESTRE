@@ -28,8 +28,8 @@ public class Employees {
 
     }
 
-    private static boolean isEmployee(int id){
-        if(id == 0){
+    private static boolean isEmployee(int index){
+        if(index == -1){
             return false;
         }
         else{
@@ -39,19 +39,21 @@ public class Employees {
 
     private static int searchEmployee(String id){
 
-        int i = 0;
+        int i = -1;
+        int employee = 0;
 
-        while(i < ids.length){
-
-            if(id.equalsIgnoreCase(ids[i])){
-                break;
-            }
+        while(i < (ids.length-1)){
 
             i++;
 
+            if(id.equals(ids[i])){
+                employee = i;
+                break;
+            }
+
         }
 
-        return i;
+        return employee;
 
     }
 
