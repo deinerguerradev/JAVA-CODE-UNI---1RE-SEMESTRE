@@ -15,18 +15,19 @@ public class Students {
 
     public static void started(){
 
-        desplegarOpciones();
+        int opcion = 1;
 
-        IO.println("Ingrese una de las opciones antoriores");
-        int opcion = sc.nextInt();
+        while(opcion != 0) {
+            desplegarOpciones();
 
-        if(opcion == 0){
-            return;
+            IO.println("Ingrese una de las opciones antoriores");
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            if (opcion != 0)
+                procesarAccion(opcion);
+
         }
-        else{
-            procesarAccion(opcion);
-        }
-
     }
 
     private static void desplegarOpciones() {
@@ -52,6 +53,7 @@ public class Students {
                 buscarEstudiante();
                 break;
             case 4:
+                eliminarEstudiante();
                 break;
             default:
                 IO.println("Ingrese un valor dentro del rango (1-3)");
@@ -84,7 +86,7 @@ public class Students {
 
             for(int i = 0; i<estado.length; i++){
 
-                if(estado[i].equalsIgnoreCase("activo")){
+                if("activo".equalsIgnoreCase(estado[i])){
                     IO.println("[" + i + "] " + " | código: " + codigo[i] + " |nombre: " + nombre[i] + " | promedio: "
                     + notas[i] + " | Estado: " + estado[i]);
                 }
@@ -105,7 +107,7 @@ public class Students {
 
         while(i<estado.length){
 
-            if(estado[i].equalsIgnoreCase("activo")){
+            if("activo".equalsIgnoreCase(estado[i])){
                 cantidadActivos++;
             }
 
@@ -132,9 +134,10 @@ public class Students {
 
         while (i < estudianesPosibles){
 
-            if(estado[i].equalsIgnoreCase("inactivo") || estado[i] == null){
+            if("inactivo".equalsIgnoreCase(estado[i]) || estado[i] == null){
 
                 IO.print("Agrege el coódigo del estudiante: ");
+                sc.nextLine();
                 String codigoEstudiante = sc.nextLine();
                 codigo[i] = codigoEstudiante;
 
@@ -148,7 +151,17 @@ public class Students {
 
                 estado[i] = "activo";
 
+                IO.print("Agregaras a otro estudiante(s/n): ");
+                sc.nextLine();
+                String opcion = sc.nextLine().toLowerCase();
+                IO.println();
+
+                if(opcion.equals("n")){
+                    break;
+                }
+
             }
+
 
             i++;
 

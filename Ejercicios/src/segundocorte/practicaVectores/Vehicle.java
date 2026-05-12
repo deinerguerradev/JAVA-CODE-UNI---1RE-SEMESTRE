@@ -70,7 +70,7 @@ public class Vehicle {
         String necesitaTecnoMecanica = tecnoMecanica(index);
 
         IO.println("Auto Encontrado: ");
-        IO.println("\taño: " + fabricacion[index] + " COP.");
+        IO.println("\taño: " + fabricacion[index]);
         IO.println("\tpropietario: " + propietario[index]);
         IO.println("\tTecnomecanica: " + necesitaTecnoMecanica);
     }

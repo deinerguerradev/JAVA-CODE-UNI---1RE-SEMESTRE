@@ -50,6 +50,9 @@ public class Employees {
                 employee = i;
                 break;
             }
+            else{
+                employee= -1;
+            }
 
         }
 
