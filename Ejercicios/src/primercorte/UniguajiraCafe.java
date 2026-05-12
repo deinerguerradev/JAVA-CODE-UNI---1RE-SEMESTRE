@@ -1,4 +1,6 @@
-import java.util.Scanner; 
+package primercorte;
+
+import java.util.Scanner;
 import java.util.HashMap; 
 
 public class UniguajiraCafe {
@@ -18,7 +20,7 @@ public class UniguajiraCafe {
 
     public static float[] menuPrice = {12000f, 2300f, 45000f}; 
 
-    public static void overview () {
+    public static void started () {
 
         IO.println("======================");
         IO.println(" CAFETERIA UNIGUAJIRA ");

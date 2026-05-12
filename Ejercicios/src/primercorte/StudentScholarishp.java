@@ -1,4 +1,6 @@
-import java.util.Scanner; 
+package primercorte;
+
+import java.util.Scanner;
 import java.util.HashMap; 
 
 public class StudentScholarishp {
@@ -10,9 +12,9 @@ public class StudentScholarishp {
         put(1119394935, new String[] {"YEIDER PERALTA", "false", "4.5f"}); 
         put(1119394592, new String[] {"DAIR GOMEZ", "true", "3.2f"}); 
 
-    }}; 
+    }};
 
-    public static void overview () {
+    public static void started () {
 
         IO.println("================================");
         IO.println("PROCESO DE BECAS PARA ESTUDIANTE");

@@ -1,10 +1,12 @@
-import java.util.Scanner; 
+package primercorte;
+
+import java.util.Scanner;
 
 public class DaysAndMoth {
 
     public static Scanner  sc = new Scanner (System.in); 
 
-    static void Day() {
+    public static void Day() {
 
         IO.println("=============="); 
         IO.println("==== DÌAS ====");
@@ -37,15 +39,14 @@ public class DaysAndMoth {
                 IO.println("Domingo");
                 break; 
             default: 
-                IO.println("Número fuera del rango"); 
-                Program.ActionToDayAndMoth(); 
+                IO.println("Número fuera del rango");
                 break; 
                  
         }
 
     }
 
-    static void Moth() {
+    public static void Moth() {
 
         IO.println("==============="); 
         IO.println("==== MESES ====");
@@ -92,8 +93,7 @@ public class DaysAndMoth {
                 IO.println("Diciembre\n"); 
                 break; 
             default: 
-                IO.println("Ingrese un valor valido dentro del rango (1-12)\n"); 
-                Program.ActionToDayAndMoth(); 
+                IO.println("Ingrese un valor valido dentro del rango (1-12)\n");
                 break; 
         }
     }

@@ -1,10 +1,12 @@
-import java.util.Scanner; 
+package primercorte;
+
+import java.util.Scanner;
 
 public class DeterminateNumbers {
 
     public static Scanner sc = new Scanner(System.in); 
     
-    static void OddOrEvenNumber (){
+    public static void OddOrEvenNumber (){
 
         IO.print("¿Cuantos numeros vas a evaluar?: ");
         int numberQuanity = sc.nextInt(); 
@@ -31,7 +33,7 @@ public class DeterminateNumbers {
         
     }
 
-    static void NegativeAndPositiveNumber () {
+    public static void NegativeAndPositiveNumber () {
 
         IO.print("Cuantos numeros vas a evaluar: ");
         int numberQuanity = sc.nextInt();  

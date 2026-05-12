@@ -65,7 +65,7 @@ public class TiendaDeVideojuegos {
             PayProcesses(_totalPay);
 
             IO.println("\n=======OPCIONES: ======="); 
-            IO.println("1. Desplegar las ventas de la sesión (opcion no disponible)");
+            IO.println("1. Desplegar las ventas de la sesión");
             IO.println("2. Salir");
             IO.println("3. seguir la sesion"); 
             
@@ -73,6 +73,7 @@ public class TiendaDeVideojuegos {
             
             if (option == 1) {
                 DisplaySesionSales();
+                IO.println(); 
             }
 
             if(option == 2){

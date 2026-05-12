@@ -1,10 +1,12 @@
-import java.util.Scanner; 
+package primercorte;
+
+import java.util.Scanner;
 
 public class DiscountAge {
 
     public static Scanner sc = new Scanner(System.in); 
 
-    static void Calculation(){
+    public static void Calculation(){
 
         IO.println("========================"); 
         IO.println("== Calcular Descuento =="); 
